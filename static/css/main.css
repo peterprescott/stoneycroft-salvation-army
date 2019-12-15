@@ -24,9 +24,11 @@ main {
 
 /*home page*/
 
+/*
 .intro {
     transform: translateY(22vh);
-}
+}*/
+
 
 .intro > h1 {
     color: #212121;
@@ -37,12 +39,14 @@ main {
     color: #757575;
     font-size: 3vmin;
 }
+/*
 
 .intro > .profile {
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
 }
+*/
 
 /*apply accent colour to links*/
 
