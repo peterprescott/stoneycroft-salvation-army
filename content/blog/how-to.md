@@ -194,6 +194,12 @@ Or, if you want to just put up a copy of this site at a domain of your choice, t
 
 There's not that much point having multiple versions of the church website at different domains, but you could if you wanted use this site's set-up as a launchpad for a website of your own...
 
-Anyway, hope that all makes sense!
+## Too Complicated?
+
+I hope that all makes sense!
+
+If you found that too complicated and are wishing for a Wordpress style sign-in and post Content Management System, then it should be possible to set up [Netlify CMS](https://www.netlifycms.org/docs/intro/) to do that sort of thing for us on this site. But I haven't quite done it yet, and personally I think it's worth at least trying to learn how to use git...
+
+Let me know how you get on.
 
 Soli Dei Gloria.
