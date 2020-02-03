@@ -132,7 +132,7 @@ It's important when editing text files that you don't try and use a word-process
 notepad content/sermons/demo.md
 ```
 
-You can then edit the page, and when you save it (just press <CTRL> + <S>), you will immediately see the changes on the `localhost:1313/sermons/demo` page in your web browser.
+You can then edit the page, and when you save it (just press CTRL + S ), you will immediately see the changes on the `localhost:1313/sermons/demo` page in your web browser.
 
 ## Formatting Pages
 
