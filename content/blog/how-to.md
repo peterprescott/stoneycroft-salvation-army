@@ -59,7 +59,7 @@ hugo
 By installing you accept licenses for the packages...
 ```
 
-aND o really make the most of the power of *git*, you need to sign up for a web-based git repository hosting service like [Github](https://github.com) or [Gitlab](https://gitlab.com). For the moment, let's just stick with the former.
+And to really make the most of the power of *git*, you need to sign up for a free web-based git repository hosting service like [Github](https://github.com) or [Gitlab](https://gitlab.com). For the moment, let's just stick with the former.
 
 ## Clone the Site and Run a Local Version
 
@@ -190,4 +190,10 @@ git push
 
 Then go to your [Github profile](https://github.com), and find the repository page for this project (which will be **https://github.com/YOUR-USER-NAME/stoneycroft-salvation-army**) and click *New Pull Request*. Which will inform me of your changes and give me the chance (if you've done more than just practice with a demo file) to merge your changes into the proper website.
 
-Hope that all makes sense!
+Or, if you want to just put up a copy of this site at a domain of your choice, then you can sign up for a free account with [Netlify](https://netlify.com), and then from [the Sites page](https://app.netlify.com/) launch a [New Site from Git](https://app.netlify.com/), which will prompt you to connect Netlify to the GitHub repository you've just updated. It should automatically load the appropriate configurations settings from the `Netlify.toml` file in the site folder, so you can then click **Deploy Site**, and within seconds your site will be live.
+
+There's not that much point having multiple versions of the church website at different domains, but you could if you wanted use this site's set-up as a launchpad for a website of your own...
+
+Anyway, hope that all makes sense!
+
+Soli Dei Gloria.
