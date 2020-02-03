@@ -21,4 +21,4 @@ preacher: ""
 [Listen to the sermon recording](/audio/...m4a).
 
 ## Slides
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/..." width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> 
+<iframe src="/slides/....pdf" style="border:0px #ffffff none;" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="600px" allowfullscreen></iframe>

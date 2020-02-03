@@ -1,13 +1,13 @@
 ---
 title: "How To Add To This Website"
 date: 2020-02-01T16:55:26Z
-draft: true
+draft: false
 ---
 
 ## Open Invitation
 If you have a computer and an internet connection then you're welcome to help develop this site.
 
-## Installing Necessary Tools
+## Setting Up the Necessary Tools
 If you're on Windows, then start by opening [Powershell](https://en.wikipedia.org/wiki/PowerShell).
 
 You'll need to have [git](https://git-scm.com/) (for version control) and [Hugo](https://gohugo.io/) (for automatically building websites) installed. Check if they are by typing these lines of code into Powershell: `git version`, `hugo version`.
@@ -59,11 +59,17 @@ hugo
 By installing you accept licenses for the packages...
 ```
 
+aND o really make the most of the power of *git*, you need to sign up for a web-based git repository hosting service like [Github](https://github.com) or [Gitlab](https://gitlab.com). For the moment, let's just stick with the former.
+
 ## Clone the Site and Run a Local Version
 
-Now you can use `git` to clone a copy of this website onto your own computer, and run a local version using Hugo:
+Now that you have signed up for Github, you can *fork* a copy of this website: just go to [the project page](https://github.com/peterprescott/stoneycroft-salvation-army), and then click *Fork* in the top-right of the screen. This will make a copy for your account to play with.
+
+Now use `git` to clone a copy of this website onto your own computer, and run a local version using Hugo (`hugo serve -D` -- the `-D` shows draft pages):
+
+(You'll need to replace `{yourusername}` with your actual username, getting rid of the curly-brackets).
 ```
->>> git clone https://github.com/peterprescott/stoneycroft-salvation-army
+>>> git clone https://github.com/{yourusername}/stoneycroft-salvation-army
 Cloning into 'stoneycroft-salvation-army'...
 remote: Enumerating objects: 123, done.
 remote: Counting objects: 100% (123/123), done.
@@ -116,15 +122,72 @@ content\sermons\demo.md created
 
 Go back to your webbrowser and look at the sermons page on the local website (`localhost:1313/sermons`) and you should see a new sermon has now been added to the list: **Demo**. Click on the title, and it will take you to the automatically generated page, which obviously now needs filling in.
 
+## Editing Pages
+
 To do that you just need to edit the textfile that Hugo has just made for us: `content/sermons/demo.md`.
 
-It's important when editing text files that you don't try and use a word-processor (like Microsoft Word), because they add lots of invisible and in this case unnecessary (and worse) extra bits, which will mess up the whole process. Instead you can just use **Notepad**; or if you've got a spare ten seconds, I recommend you download [**Geany**](https://www.geany.org/) (pronounced [*genie*](https://www.youtube.com/watch?v=pa53XoJwudE): `choco install geany`.
+It's important when editing text files that you don't try and use a word-processor (like Microsoft Word), because they add lots of invisible and in this case unnecessary (and worse) extra bits, which will mess up the whole process. Instead you can just use **Notepad** to open the file (-- or if you've got a spare ten seconds, I recommend you download [**Geany**](https://www.geany.org/) (pronounced [*genie*](https://www.youtube.com/watch?v=pa53XoJwudE): `choco install geany`; and you  may need to add Geany to your system's [Environment Variables](#env_variables), and then you can use Geany from the command line: `geany filename`).
 
 ```
->>> choco install geany
-Chocolatey v0.10.15
-Installing the following packages:
-geany...
+notepad content/sermons/demo.md
 ```
 
+You can then edit the page, and when you save it (just press <CTRL> + <S>), you will immediately see the changes on the `localhost:1313/sermons/demo` page in your web browser.
 
+## Formatting Pages
+
+If you want to add some simple formatting, then you just need to learn the simple tricks of [Markdown -- click here for a full cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+
+```
+**bold**
+*italic*
+[hypertext link](URL)
+```
+
+## Adding Other Related Files
+
+The other thing that might be helpful to say is that if you want to share the slides of your sermon, then the simplest thing to do is to save them as a .pdf file in the `static/slides` folder of this site, and then make sure the `iframe` under the **Slides** heading is pointing to the right file.
+
+Likewise with audio recordings of sermons, put them (for the moment, this may not be the optimal solution long term) in the `static/audio` folder, and just make sure the link under **Audio** is pointing to the right file.
+
+## Saving Changes
+
+When you're done adding and editing files, you need to save your changes to the project folder. 
+
+First, let's ask git to show us what files have changed: `git status`
+```
+>>> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   archetypes/default.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        content/sermons/demo.md
+        public/
+        static/slides/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+There are three steps in using git to track changes to project files:
+* First, `git add` the files you want to track to the 'staging area'. You can name the specific files you want to add, or add all changed filed with `git add *`
+* Only when they have been added to the staging area can files be 'committed' to the .git project masterfile tracking all the changes to all your project files ( `git add -m "Write a message in the quotes here explaining what your changes do (in the imperative), eg. Add Sunday Sermon for February 2nd"`)
+* Then you still want to `git push` those changes up to the copy of the masterfile saved in 'the cloud', so that if your machine crashes or you accidentally delete the file, you will still have a backup -- and so others can easily get access to your changes.
+
+So, let's do all those things:
+```
+git add *
+git commit -m "add new demo sermon"
+git push
+```
+
+Then go to your [Github profile](https://github.com), and find the repository page for this project (which will be **https://github.com/YOUR-USER-NAME/stoneycroft-salvation-army**) and click *New Pull Request*. Which will inform me of your changes and give me the chance (if you've done more than just practice with a demo file) to merge your changes into the proper website.
+
+Hope that all makes sense!
