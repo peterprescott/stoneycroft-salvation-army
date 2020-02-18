@@ -1,7 +1,7 @@
 ---
 title: "The Mighty Messenger"
 date: 2020-02-16T13:03:22Z
-draft: true
+draft: false
 text: "Revelation 10"
 preacher: "Peter Prescott"
 ---

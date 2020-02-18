@@ -1,7 +1,7 @@
 ---
 title: "Story Sunday: Esther"
 date: 2020-02-02T13:00:50Z
-draft: true
+draft: false
 text: "Esther"
 preacher: "Jenni Tomlin"
 ---
